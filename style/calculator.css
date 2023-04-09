@@ -1,0 +1,50 @@
+*, html {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+}
+* a, html a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background-color: beige;
+  width: 15rem;
+  height: 24.1rem;
+  border: 1px solid black;
+}
+.calculator .line {
+  width: 100%;
+  border-bottom: 1px solid black;
+  line-height: 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.calculator .line .eval_result {
+  width: 100%;
+  font-size: 1rem;
+  text-align: right;
+  height: 2.5rem;
+  background-color: aliceblue;
+  color: black;
+}
+.calculator .line span {
+  padding: 0.6rem;
+}
+.calculator .line span:hover {
+  cursor: pointer;
+  background-color: burlywood;
+}
+.calculator .line .calc_result {
+  flex-basis: 35%;
+}/*# sourceMappingURL=calculator.css.map */

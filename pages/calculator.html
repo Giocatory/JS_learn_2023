@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Learn 2023</title>
+    <link rel="stylesheet" href="../style/calculator.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="line">
+            <p class="eval_result" readonly> </p>
+        </div>
+        <div class="line">
+            <span class="reset_eval" onclick="click_reset_eval()">C</span>
+            <span class="divide" onclick="click_divide()">/</span>
+            <span class="multiply" onclick="click_multiply()">*</span>
+            <span class="del_last_char" onclick="click_del_last_char()">D</span>
+        </div>
+        <div class="line">
+            <span class="seven" onclick="click_seven()">7</span>
+            <span class="eight" onclick="click_eight()">8</span>
+            <span class="nine" onclick="click_nine()">9</span>
+            <span class="minus" onclick="click_minus()">-</span>
+        </div>
+        <div class="line">
+            <span class="four" onclick="click_four()">4</span>
+            <span class="five" onclick="click_five()">5</span>
+            <span class="six" onclick="click_six()">6</span>
+            <span class="plus" onclick="click_plus()">+</span>
+        </div>
+        <div class="line">
+            <span class="one" onclick="click_one()">1</span>
+            <span class="two" onclick="click_two()">2</span>
+            <span class="three" onclick="click_three()">3</span>
+            <span class="percent" onclick="click_percent()">%</span>
+        </div>
+        <div class="line">
+            <span class="dot" onclick="click_dot()">.</span>
+            <span class="zero" onclick="click_zero()">0</span>
+            <span class="calc_result" onclick="click_calc_result()">=</span>
+        </div>
+    </div>
+
+    <script src="../scripts/calculator.js" ></script>
+</body>
+</html>
