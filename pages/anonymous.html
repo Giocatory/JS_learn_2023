@@ -29,6 +29,20 @@
             return str;
         })();
         console.log(iffy);
+
+        let exp = ( () => {
+            let str = 'self anonymous output';
+            return str;
+        })();
+        console.log(exp);
+
+        /*
+            Hoisted: 300
+            Assigned: 96
+            Anonymous: 10
+            Self Invoked Output
+            self anonymous output
+        */
     </script>
 </body>
 </html>
