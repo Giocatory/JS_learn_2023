@@ -18,3 +18,5 @@ Count is: 1
 Count is: 2
 Count is: 3
 */
+
+console.log(add.prototype);
