@@ -29,3 +29,11 @@ let myStrArr = "1,2,3,4,5".split(',');
 console.log(myStrArr); // [ '1', '2', '3', '4', '5' ]
 let strArrToNum = myStrArr.map( x => parseInt(x));
 console.log(strArrToNum); // [ 1, 2, 3, 4, 5 ]
+
+
+let arr = [3, 4, 8, 8];
+arr = arr.sort();
+
+console.log(
+    Math.floor(Math.max(...arr) / Math.min(...arr))
+); // 2
