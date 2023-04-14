@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, html{
+            box-sizing: border-box;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<ul id="list"></ul>
+
+    <script>
+        const list = document.querySelector('#list');
+        list.innerHTML += '<li>Browser: ' + navigator.appName + '</li>';
+        list.innerHTML += '<li>Version: ' + navigator.appVersion + '</li>';
+        list.innerHTML += '<li>Platform: ' + navigator.platform + '</li>';
+
+        if(window.addEventListener){
+            list.innerHTML += '<li>This modern browser!</li>';
+        }
+
+    </script> 
+</body>
+</html>
