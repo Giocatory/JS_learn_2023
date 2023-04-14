@@ -1,19 +1,22 @@
-const months  = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+let seasons  = ['Winter', 'Spring', 'Summer', 'Fall'];
 
-for (let month in months) {
-    console.log(`${+month + 1}) ${months[month]}`);
+for (let season in seasons) {
+    console.log(`${+season + 1}) ${seasons[season]}`);
 }
 /* 
-1) January
-2) February
-3) March
-4) April
-5) May
-6) June
-7) July
-8) August
-9) September
-10) October
-11) November
-12) December 
+1) Winter
+2) Spring
+3) Summer
+4) Fall 
 */
+
+console.log(`Seasons: ${seasons.join(', ')}\n`); // Seasons: Winter, Spring, Summer, Fall
+
+seasons.sort();
+console.log(...seasons); // Fall Spring Summer Winter
+
+// seasons.sort( (a, b) => a - b);
+seasons.reverse();
+console.log(...seasons); // Winter Summer Spring Fall
+
+console.log(seasons.includes('Fall')); // true
