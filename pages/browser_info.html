@@ -15,7 +15,24 @@
 <body>
 <ul id="list"></ul>
 
+<br>
+<h1>Document methods:</h1>
+
+<p></p>
     <script>
+        const htmlTitle = document.querySelector('h1');
+        
+        htmlTitle.setAttribute('title', htmlTitle.textContent);
+
+        htmlTitle.addEventListener('click', function(event){
+            if(htmlTitle.style.color === 'blue'){
+                htmlTitle.style.color = 'black';
+            }
+            else{
+                htmlTitle.style.color = 'blue';
+            }
+        });
+
         const list = document.querySelector('#list');
         list.innerHTML += '<li>Browser: ' + navigator.appName + '</li>';
         list.innerHTML += '<li>Version: ' + navigator.appVersion + '</li>';
@@ -25,6 +42,10 @@
             list.innerHTML += '<li>This modern browser!</li>';
         }
 
+        const documentMethods = document.querySelector('p');
+        for (const method in document){
+            documentMethods.innerHTML += `<strong>${method}</strong>: ${document[method]}<br>`;
+        }
     </script> 
 </body>
 </html>
