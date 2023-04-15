@@ -6,7 +6,7 @@ let user = {
     employee:{
         position: 'middle',
         salary: 200000,
-    }
+    },
 }
 
 console.log(`User ${user?.name}: position admin ${user?.isAdmin}`); // User Mikhail: position admin true
@@ -23,7 +23,7 @@ for(let value in user) {
         }
         continue;
     }
-    
+
     console.log(`${value}: ${user[value]}`);
 }
 
