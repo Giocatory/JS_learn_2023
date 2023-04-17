@@ -19,5 +19,5 @@ class Counter{
 }
 
 console.log(
-    Counter?.plus.plus.plus?.minus?.show()
+    Counter?.plus.plus.plus?.minus.show()
 ); // 2
