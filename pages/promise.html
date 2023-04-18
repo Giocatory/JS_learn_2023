@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Random Activity</h2>
+    <p><strong>Activity:</strong> <span id="activity"></span></p>
+    <p><strong>Type:</strong> <span id="type"></span></p>
+    <p><strong>Participants:</strong> <span id="participants"></span></p>
+    <p><strong>Price:</strong> <span id="price"></span></p>
+    <p><strong>Accessibility:</strong> <span id="accessibility"></span></p>
+    <p id="error"></p>
+    
+    <script>
+        function displayActivity(activity, type, participants, price, accessibility) {
+            const activityElem = document.getElementById('activity');
+            const typeElem = document.getElementById('type');
+            const participantsElem = document.getElementById('participants');
+            const priceElem = document.getElementById('price');
+            const accessibilityElem = document.getElementById('accessibility');
+  
+            activityElem.textContent = activity;
+            typeElem.textContent = type;
+            participantsElem.textContent = participants;
+            priceElem.textContent = price;
+            accessibilityElem.textContent = accessibility;
+        }
+
+        function displayError(error) {
+            const errorElem = document.getElementById('error');
+            errorElem.textContent = 'An error occurred: ' + error.message;
+        }
+
+        fetch('https://www.boredapi.com/api/activity')
+            .then(response => response.json())
+            .then(data => {
+                const activity = data.activity;
+                const type = data.type;
+                const participants = data.participants;
+                const price = data.price;
+                const accessibility = data.accessibility;
+    
+                // отобразить полученные данные на странице
+                displayActivity(activity, type, participants, price, accessibility);
+            })
+            .catch(error => {
+                console.error('An error occurred:', error);
+                displayError(error);
+            });
+
+    </script>
+</body>
+</html>
