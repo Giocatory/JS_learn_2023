@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        async function showAvatar() {
+
+        // запрашиваем JSON с данными пользователя
+        let response = await fetch('https://api.github.com/users/Giocatory');
+        let user = await response.json();
+
+        // запрашиваем информацию об этом пользователе из github
+        let githubResponse = await fetch(`https://api.github.com/users/${user.name}`);
+        let githubUser = await githubResponse.json();
+
+        // отображаем аватар пользователя
+        let img = document.createElement('img');
+        img.src = "https://avatars.githubusercontent.com/u/36039811?s=400&v=4";
+        img.className = "promise-avatar-example";
+        document.body.append(img);
+
+        // ждём 3 секунды и затем скрываем аватар
+        await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+
+        img.remove();
+
+        return githubUser;
+        }
+
+        showAvatar();
+    </script>
+</body>
+</html>
