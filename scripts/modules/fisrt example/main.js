@@ -1,7 +1,7 @@
 'use strict';
-import { sayHi } from "./sayHi.js"; // в корень надо добавить фаил json и у модуля ставить расширение .mjs
+import * as say from "./sayHi.js"; // в корень надо добавить фаил json и у модуля ставить расширение .mjs
 
-let helloMessage = sayHi('Mikhail', "Hello");
+let helloMessage = say.sayHi('Mikhail', "Hello");
 console.log(helloMessage); // Hello Mikhail
 console.log();
 
